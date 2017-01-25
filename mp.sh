@@ -1,7 +1,7 @@
 #!/bin/bash
 
 arquivo=~/bookmarks.html
-diretorio="/home/del-user/Desktop/1Del/programas/favoritos"
+diretorio="$USER/Desktop/1Del/programas/favoritos"
 
 pwd="$(pwd)"
 cd "$diretorio"
