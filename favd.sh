@@ -2,7 +2,7 @@
 
 
 arquivo=~/bookmarks.html
-diretorio="/home/del-user/Desktop/1Del/programas/1favoritos"
+diretorio="/home/$USER"
 
 
 
