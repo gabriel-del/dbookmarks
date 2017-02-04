@@ -12,12 +12,15 @@ Modo Bakup:
 ./favb.sh mesmo que o fav.sh porém passa apenas os arquivos na pastra 'Outros favoritos'.
 
 A ideia é salvar os favoritos pelo navegador, a pasta 'Outros favoritos' já é a padrão. Quando sentir necessidade de organizá-los, seguir as etapas:
-\n1) Exportar arquivo do navegador.
-\n2) Executar o favb.sh para trazer os novos favoritos ao seu pc. 
-\n3) Organizá-los da forma que achar melhor.
-4) Executar o favr.sh para gerar o novo arquivo.
-5) Apagar favoritos do navegador.
-6) Importar favoritos do arquivo para o navegador.
+
+<ul>
+<li>Exportar arquivo do navegador.</li>
+<li>Executar o favb.sh para trazer os novos favoritos ao seu pc.</li> 
+Organizá-los da forma que achar melhor.
+Executar o favr.sh para gerar o novo arquivo.
+Apagar favoritos do navegador.
+Importar favoritos do arquivo para o navegador.
+</ul>
 
 Dependências:
 Nenhuma.
