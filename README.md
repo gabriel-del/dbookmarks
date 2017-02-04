@@ -13,14 +13,14 @@ Modo Bakup:
 
 A ideia é salvar os favoritos pelo navegador, a pasta 'Outros favoritos' já é a padrão. Quando sentir necessidade de organizá-los, seguir as etapas:
 
-<ul>
+<ol>
 <li>Exportar arquivo do navegador.</li>
 <li>Executar o favb.sh para trazer os novos favoritos ao seu pc.</li> 
-Organizá-los da forma que achar melhor.
-Executar o favr.sh para gerar o novo arquivo.
-Apagar favoritos do navegador.
-Importar favoritos do arquivo para o navegador.
-</ul>
+<li>Organizá-los da forma que achar melhor.</li>
+<li>Executar o favr.sh para gerar o novo arquivo.</li>
+<li>Apagar favoritos do navegador.</li>
+<li>Importar favoritos do arquivo para o navegador.</li>
+</ol>
 
 Dependências:
 Nenhuma.
