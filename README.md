@@ -1,17 +1,17 @@
-Configuração:
-Abra "favd.sh" procure a quarta linha onde diz "arquivo" e coloque seu arquivo de backup de favoritos gerado pelo mozilla (acredito que no chrome também funcione mas ainda nao testei) entre as aspas.
-Na linha de baixo coloque entre as aspas o diretório onde quer salvar seus favoritos. 
+<h2>Configuração</h2>
+<p>Abra "favd.sh" procure a quarta linha onde diz "arquivo" e coloque seu arquivo de backup de favoritos gerado pelo mozilla (acredito que no chrome também funcione mas ainda nao testei) entre as aspas.</p>
+<p>Na linha de baixo coloque entre as aspas o diretório onde quer salvar seus favoritos.</p> 
 
-Modo de Uso:
-Execute ./fav.sh para transformar o arquivo html em diretórios.
+<h2>Modo de Uso</h2>
+<p>Execute ./fav.sh para transformar o arquivo html em diretórios.</p>
 
-Modo Reverso:
-./favr.sh transforma os diretórios no arquivo html.
+<h2>Modo Reverso</h2>
+<p>./favr.sh transforma os diretórios no arquivo html.</p>
 
-Modo Bakup:
-./favb.sh mesmo que o fav.sh porém passa apenas os arquivos na pastra 'Outros favoritos'.
+<h2>Modo Bakup</h2>
+<p>./favb.sh mesmo que o fav.sh porém passa apenas os arquivos na pastra 'Outros favoritos'.</p>
 
-A ideia é salvar os favoritos pelo navegador, a pasta 'Outros favoritos' já é a padrão. Quando sentir necessidade de organizá-los, seguir as etapas:
+<p>A ideia é salvar os favoritos pelo navegador, a pasta 'Outros favoritos' já é a padrão. Quando sentir necessidade de organizá-los, seguir as etapas</p>
 
 <ol>
 <li>Exportar arquivo do navegador.</li>
@@ -22,11 +22,11 @@ A ideia é salvar os favoritos pelo navegador, a pasta 'Outros favoritos' já é
 <li>Importar favoritos do arquivo para o navegador.</li>
 </ol>
 
-Dependências:
-Nenhuma.
+<h2>Dependências</h2>
+<p>Nenhuma.</p>
 
-Bugs:
-Em favoritos cujo o nome tem barras '/' defini para substituir por '"-"' pois não é possível diretórios ou arquivos com barras.
-Alguns caracteres específicos não são escritos corretamente no nome dos favoritos.
+<h2>Bugs</h2>
+<p>Em favoritos cujo o nome tem barras '/' defini para substituir por '"-"' pois não é possível diretórios ou arquivos com barras.</p>
+<p>Alguns caracteres específicos não são escritos corretamente no nome dos favoritos.</p>
 
 
