@@ -1,6 +1,12 @@
 #!/bin/bash
 
-source favd.sh
+source dados.sh
+pwd="$(pwd)"
+cd "$diretorio"
+
+
+prosegue=0
+[[ $1 == '-b' ]] && backup=1 || backup =0
 
 erro() { zenity --info --text="Erro: $1!" && exit 1 ;}
 addfav() {
@@ -16,14 +22,14 @@ linhasarquivo="$( cat $arquivo | wc -l)"
 coluna() { echo "$linha" | awk "{print \$$1}" ;}
 checkcoluna() { [[ "$(coluna $1 | grep -c $2)" -eq 0 ]] && erro "Nao encontrou $2 na coluna $1, linha $i" ;}
 conteudocoluna() { echo "$linha" | awk "{print \$$1}" | cut -d'"' -f2 ;}
-titulo() { echo $linha | cut -d'>' -f3 | cut -d'<' -f1 | sed 's/\//"-"/g' ;}
+titulo() { echo $linha | cut -d'>' -f3 | cut -d'<' -f1 | sed 's/\//\\/g' | xmlstarlet unesc ;}
 
-prosegue=0
+
 for (( i=10 ; i <= $linhasarquivo ; i++ ))
 do
     linha="$(cat $arquivo | sed -n "$i"p | sed 's/<HR>//g' | tr -s [:space:] | sed 's/^ //g' | sed 's/ $//g')"
     [[ "$(titulo)" == 'Outros favoritos' ]] && prosegue=1
-    [[ $prosegue -eq 0 ]] && continue
+    [[ $prosegue -eq 0 ]] && [[ $backup -eq 1 ]] && continue
     case "$(coluna 1)" in
 	'<DT><A') checkcoluna 2 HREF; link="$(conteudocoluna 2)"
 	    file=$(titulo).html

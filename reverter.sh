@@ -1,5 +1,9 @@
 #!/bin/bash
-source favd.sh
+
+source dados.sh
+pwd="$(pwd)"
+cd "$diretorio"
+
 
 erro() { zenity --info --text="Erro: $1!" ; exit 1 ;}
 qtd() { ls -1 | wc -l; }
@@ -24,16 +28,17 @@ pasta()  {
     atual="$(ls --group-directories-first -1 | sed -n "$i"p)"
     [[ -d "$atual" ]] && tipo=d
     [[ "$atual" =~ \.html$ ]] && tipo=h
+    atual2=$(echo $atual | sed 's/\\/\//g' | xmlstarlet esc)
 
     case $tipo in
 	d) echo "$i" > .a
 	    cd "$atual"
 	    pwd
-	    echo "<DT><H3>$atual</H3>" >> "$arquivo"
+	    echo "<DT><H3>$atual2</H3>" >> "$arquivo"
 	    echo "<DL><p>" >> "$arquivo"
     	    i=0
 	    ;;
-	h) sed -n 4p "$atual" >> "$arquivo" 
+	h) sed -n 4p "$atual2" >> "$arquivo" 
 	    ;;
 	*) erro "Arquivo Desconhecido!";;
     esac
