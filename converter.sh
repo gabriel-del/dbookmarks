@@ -22,7 +22,7 @@ linhasarquivo="$( cat $arquivo | wc -l)"
 coluna() { echo "$linha" | awk "{print \$$1}" ;}
 checkcoluna() { [[ "$(coluna $1 | grep -c $2)" -eq 0 ]] && erro "Nao encontrou $2 na coluna $1, linha $i" ;}
 conteudocoluna() { echo "$linha" | awk "{print \$$1}" | cut -d'"' -f2 ;}
-titulo() { echo $linha | cut -d'>' -f3 | cut -d'<' -f1 | sed 's/\//\\/g' | xmlstarlet unesc ;}
+titulo() { echo $linha | cut -d'>' -f3 | cut -d'<' -f1 | sed 's/\//\\/g' | sed 's/&quot;/"/g' | xmlstarlet unesc ;}
 
 
 for (( i=10 ; i <= $linhasarquivo ; i++ ))

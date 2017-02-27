@@ -28,7 +28,7 @@ pasta()  {
     atual="$(ls --group-directories-first -1 | sed -n "$i"p)"
     [[ -d "$atual" ]] && tipo=d
     [[ "$atual" =~ \.html$ ]] && tipo=h
-    atual2=$(echo $atual | sed 's/\\/\//g' | xmlstarlet esc)
+    atual2=$(echo $atual | sed 's/\\/\//g'| sed 's/"/&quot;/g' | xmlstarlet esc)
 
     case $tipo in
 	d) echo "$i" > .a
