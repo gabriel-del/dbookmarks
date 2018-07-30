@@ -1,6 +1,9 @@
 #!/bin/bash
+#set -x
 
-source dados.sh
+arquivo=~/bookmarks.html
+diretorio="/home/$USER/.del-favs"
+
 pwd="$(pwd)"
 cd "$diretorio"
 
@@ -38,7 +41,7 @@ pasta()  {
 	    echo "<DL><p>" >> "$arquivo"
     	    i=0
 	    ;;
-	h) sed -n 4p "$atual2" >> "$arquivo" 
+	h) sed -n 4p "$atual" >> "$arquivo" 
 	    ;;
 	*) erro "Arquivo Desconhecido!";;
     esac
