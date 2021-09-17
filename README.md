@@ -1,32 +1,21 @@
-<h2>Configuração</h2>
-<p>Abra "dados.sh" procure a quarta linha onde diz "arquivo" e coloque seu arquivo de backup de favoritos gerado pelo mozilla (acredito que no chrome também funcione mas ainda nao testei) entre as aspas.</p>
-<p>Na linha de baixo coloque entre as aspas o diretório onde quer salvar seus favoritos.</p> 
+# Bookmarks organizer
 
-<h2>Modo de Uso</h2>
-<p>Execute ./converter.sh para transformar o arquivo html em diretórios.</p>
+Transform bookmark file from browser on folders and files, and the files when executed open the website on browser.
 
-<h2>Modo Reverso</h2>
-<p>./reverter.sh transforma os diretórios no arquivo html.</p>
+It's useful to organizer the bookmarks on your computer or 
+to use bookmarks locally with file manager (ex.: [ranger](https://ranger.github.io/))
 
-<h2>Modo Bakup</h2>
-<p>./converter.sh -b mesmo que o fav.sh porém passa apenas os arquivos na pastra 'Outros favoritos'.</p>
+# How to
+Execute ./convert.sh to transform the html file on folders and files
 
-<p>A ideia é salvar os favoritos pelo navegador, a pasta 'Outros favoritos' já é a padrão. Quando sentir necessidade de organizá-los, seguir as etapas</p>
+## Reverse Mode
+Execute ./revert.sh to transform the folders and files back to the html file
 
-<ol>
-<li>Exportar arquivo do navegador.</li>
-<li>Executar o converter.sh -b para trazer os novos favoritos ao seu pc.</li> 
-<li>Organizá-los da forma que achar melhor.</li>
-<li>Executar o favr.sh para gerar o novo arquivo.</li>
-<li>Apagar favoritos do navegador.</li>
-<li>Importar favoritos do arquivo para o navegador.</li>
-</ol>
+# Dependencies
+* xmlstarlet
 
-<h2>Dependências</h2>
-<p>xmlstarlet</p>
-
-<h2>Bugs</h2>
-<p>Em favoritos cujo o nome tem barras '/' defini para substituir por '\' pois não é possível diretórios ou arquivos com barras.</p>
+# Bugs
+On bookmarks starting with '/', will be changed to '\' for default.
 
 
 
