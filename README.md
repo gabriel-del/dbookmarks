@@ -15,7 +15,7 @@ Execute ./revert.sh to transform the folders and files back to the html file
 * xmlstarlet
 
 # Bugs
-On bookmarks starting with '/', will be changed to '\' for default.
+On bookmarks starting with '/', will be changed to '\\' for default.
 
 
 
